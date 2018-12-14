@@ -5,7 +5,7 @@ export default class Index extends React.Component {
   render() {
     return (
         <View style={styles.container}>
-          <Text>Hello world!</Text>
+          <Text>React Native Redux kit!</Text>
         </View>
     );
   }

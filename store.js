@@ -1,8 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
-const NODE_ENV = process.env.NODE_ENV || "development"
-
 export const InitialState = {
   
 }
