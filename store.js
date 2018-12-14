@@ -8,7 +8,7 @@ export const InitialState = {
 }
 
 export const actionTypes = {
-    UPDATE_STATE = "UPDATE_STATE" 
+    UPDATE_STATE: "UPDATE_STATE" 
 }
 
 // REDUCERS
@@ -33,7 +33,5 @@ export const updateState = (key, value) => (dispatch, getState) => {
 
 
 export function initializeStore (initialState = InitialState) {
-  if(NODE_ENV=="production"){
     return createStore(reducer, initialState, applyMiddleware(thunkMiddleware))
-  }
 }
