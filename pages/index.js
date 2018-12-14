@@ -1,21 +1,24 @@
 import React from 'react'
-import { AppRegistry, StyleSheet, View, Text, Button } from 'react-native'
+import { AppRegistry, StyleSheet, View } from 'react-native'
 import {connect} from "react-redux"
-import {updateState} from '../store'
+
 
 class Index extends React.Component {
+
+  constructor(props){
+    super(props)
+  }
+
+  componentWillMount(){
+    
+  }
+
   render() {
-    let {test, dispatch} = this.props
+    let {children} = this.props
     return (
-        <View style={styles.container}>
-          <Text>{test}</Text>
-          <Button
-            onPress={() => {
-              dispatch(updateState("test", "Hehe"))
-            }}
-            title="Press Me"
-          />
-        </View>
+      <View style={styles.container}>
+          {children}
+      </View>
     );
   }
 }
@@ -23,7 +26,7 @@ class Index extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F9FAFE',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -34,7 +34,7 @@ class Auth {
 		})
 	}
 
-	checkAuth() {
+	checkAuth(){
 		let token = AsyncStorage.token
 		if(token && token.length > 0) {
 			return true
