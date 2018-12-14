@@ -1,11 +1,20 @@
 import React from 'react'
-import { AppRegistry, StyleSheet, View, Text } from 'react-native'
+import { AppRegistry, StyleSheet, View, Text, Button } from 'react-native'
+import {connect} from "react-redux"
+import {updateState} from '../store'
 
-export default class Index extends React.Component {
+class Index extends React.Component {
   render() {
+    let {test, dispatch} = this.props
     return (
         <View style={styles.container}>
-          <Text>React Native Redux kit!</Text>
+          <Text>{test}</Text>
+          <Button
+            onPress={() => {
+              dispatch(updateState("test", "Hehe"))
+            }}
+            title="Press Me"
+          />
         </View>
     );
   }
@@ -19,5 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default connect(store => store)(Index)
 
 AppRegistry.registerComponent('ship-mobile', () => Index);

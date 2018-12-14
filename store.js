@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
 export const InitialState = {
-  
+  test: "React Native Redux kit!"
 }
 
 export const actionTypes = {
